@@ -3,7 +3,7 @@ version: 1.0.0
 slug: dnsmasq
 name: Dnsmasq
 description: A simple DNS and DHCP server
-url: https://github.com/K0s1nski/ha-addons/tree/main/dnsmasq-dhcp
+url: https://github.com/k0s1nski/customha/tree/main/dnsmasqdhcp
 advanced: true
 arch:
   - armhf
@@ -11,7 +11,7 @@ arch:
   - aarch64
   - amd64
   - i386
-image: K0s1nski/{arch}-addon-dnsmasq
+image: k0s1nski/{arch}-addon-dnsmasqdhcp
 init: false
 options:
   defaults:
