@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: Home assistant custom
+url: 'https://github.com/K0s1nski/ha-addons'
+maintainer: K0s1nski
