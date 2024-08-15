@@ -11,7 +11,7 @@ arch:
   - aarch64
   - amd64
   - i386
-image: gchr.io/k0s1nski/{arch}-addon-dnsmasqdhcp
+image:  ghcr.io/k0s1nski/{arch}-addon-dnsmasqdhcp
 init: false
 options:
   defaults:
