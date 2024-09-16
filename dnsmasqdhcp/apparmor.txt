@@ -7,25 +7,25 @@ profile dnsmasq flags=(attach_disconnected,mediate_deleted) {
   signal,
 
   # S6-Overlay & Bashio
-  /init rix,
-  /bin/** ix,
-  /usr/bin/** ix,
-  /etc/s6/** rix,
-  /run/s6/** rwix,
-  /etc/services.d/** rwix,
-  /etc/cont-init.d/** rwix,
-  /etc/cont-finish.d/** rwix,
+  /init rx,
+  /bin/** x,
+  /usr/bin/** x,
+  /etc/s6/** rx,
+  /run/s6/** rwx,
+  /etc/services.d/** rwx,
+  /etc/cont-init.d/** rwx,
+  /etc/cont-finish.d/** rwx,
   /run/** rwk,
 
   # Bashio
-  /usr/lib/bashio/** ix,
+  /usr/lib/bashio/** x,
   /tmp/** rw,
 
   # Access to Options.json and other files within your addon
   /data/** rw,
 
   # Execution program
-  /usr/sbin/dnsmasq cx,
+  /usr/sbin/dnsmasq x,
 
   profile /usr/sbin/dnsmasq flags=(attach_disconnected,mediate_deleted) {
     #include <abstractions/base>
