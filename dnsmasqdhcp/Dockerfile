@@ -8,7 +8,7 @@ ENV LANG C.UTF-8
 RUN apk add --no-cache dnsmasq
 
 # Copy data
-COPY rootfs /
-COPY config.sh /
+COPY --chmod=0755 rootfs /
+COPY --chmod=0755 config.sh /
 
 CMD [ "/config.sh" ]
