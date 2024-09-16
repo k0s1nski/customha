@@ -1,5 +1,5 @@
 ---
-version: 1.0.1
+version: 1.0.2
 slug: dnsmasq
 name: Dnsmasq
 description: A simple DNS and DHCP server
@@ -25,12 +25,12 @@ options:
   log_queries: false
   log_dhcp: false
   dhcp: false
-  dhcp_range:
-  dhcp_netmask:
-  dhcp_router:
-  dhcp_dns:
-  dhcp_ntp:
-  dhcp_domain:
+  dhcp_range: 192.168.0.100,192.168.0.200
+  dhcp_netmask: 255.255.255.0
+  dhcp_router: 192.168.0.1
+  dhcp_dns: 1.1.1.1
+  dhcp_ntp: 192.168.0.1
+  dhcp_domain: example.lan
   cache_size: 150
 ports:
   53/tcp: 53
