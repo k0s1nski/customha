@@ -9,4 +9,6 @@ RUN apk add --no-cache dnsmasq
 
 # Copy data
 COPY rootfs /
+COPY config.sh /
 
+CMD [ "/config.sh" ]
