@@ -1,11 +1,11 @@
 ---
-version: 1.0.4
+version: 1.0.5
 slug: dnsmasq
 name: Dnsmasq
 description: A simple DNS and DHCP server
 url: https://github.com/k0s1nski/customha/tree/main/dnsmasqdhcp
 advanced: true
-apparmor: false
+apparmor: true
 arch:
   - armhf
   - armv7
