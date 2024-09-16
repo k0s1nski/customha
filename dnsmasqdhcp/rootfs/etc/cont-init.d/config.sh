@@ -3,11 +3,13 @@
 # DNSMASQ config
 # ==============================================================================
 
-CONFIG="/etc/dnsmasq.conf.example"
 bashio::log.info "Configuring dnsmasq..."
-cat /data/options.json
-tempio \
-    -conf /data/options.json \
-    -template /usr/share/tempio/dnsmasq.config \
-    -out "${CONFIG}"
+
+test1=$(bashio::config 'dhcp_range')
+bashio::log.cyan "Range: $(test1)"
+
+# tempio \
+#     -conf /data/options.json \
+#     -template /usr/share/tempio/dnsmasq.config \
+#     -out /etc/dnsmasq.conf
 
