@@ -5,6 +5,7 @@ name: Dnsmasq
 description: A simple DNS and DHCP server
 url: https://github.com/k0s1nski/customha/tree/main/dnsmasqdhcp
 advanced: true
+apparmor: false
 arch:
   - armhf
   - armv7

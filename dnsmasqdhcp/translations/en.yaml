@@ -21,6 +21,30 @@ configuration:
   log_queries:
     name: Log Queries
     description: Log all DNS requests.
+  log_dhcp:
+    name: Log DHCP
+    description: Log all DHCP requests.
+  dhcp:
+    name: Enable DHCP
+    description: Enable DHCP server.
+  dhcp_range:
+    name: DHCP Range
+    description: CIDR range for dhcp server.
+  dhcp_netmask:
+    name: DHCP Netmask
+    description: DHCP Netmask.
+  dhcp_router:
+    name: DHCP Router
+    description: Default router provided by DHCP server.
+  dhcp_dns:
+    name: DNS Server
+    description: List of DNS server provided by DHCP server.
+  dhcp_ntp:
+    name: NTP server
+    description: NTP server provided by DHCP server.
+  dhcp_domain:
+    name: DHCP domain
+    description: Default domain.
 network:
   53/tcp: TCP port for DNS requests.
   53/udp: UDP port for DNS requests.
