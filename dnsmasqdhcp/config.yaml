@@ -1,5 +1,5 @@
 ---
-version: 1.0.16
+version: 1.0.17
 slug: dnsmasq
 name: Dnsmasq
 description: A simple DNS and DHCP server
@@ -13,7 +13,6 @@ arch:
   - amd64
   - i386
 image:  ghcr.io/k0s1nski/{arch}-addon-dnsmasqdhcp
-init: false
 options:
   defaults:
     - 1.1.1.1
