@@ -7,5 +7,7 @@ ENV LANG C.UTF-8
 # Setup base
 RUN apk add --no-cache dnsmasq hostapd
 
+RUN ln -sf /bin/bash /usr/bin/bash
+
 # Copy data
 COPY --chmod=0755 rootfs /
