@@ -1,5 +1,5 @@
 ---
-version: 1.1.1
+version: 1.1.2
 slug: dnsmasq
 name: Dnsmasq
 description: A simple DNS and DHCP server
@@ -73,7 +73,7 @@ schema:
   cache_size: int
   hostapd_interface: str
   hostapd_ssid: str
-  hostapd_passphrase: str
+  hostapd_wpa_passphrase: str
   hostapd_channel: int
   hostapd_hw_mode: str
 startup: system
