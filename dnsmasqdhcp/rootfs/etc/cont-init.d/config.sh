@@ -1,11 +1,18 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# DNSMASQ config
+# DNSMASQ and HOSTAPD config
 # ==============================================================================
 
-CONFIG="/etc/dnsmasq.conf"
+DNS_CONFIG="/etc/dnsmasq.conf"
 bashio::log.info "Configuring dnsmasq..."
 tempio \
     -conf /data/options.json \
     -template /usr/share/tempio/dnsmasq.config \
-    -out "${CONFIG}"
+    -out "${DNS_CONFIG}"
+
+HOSTAPD_CONFIG="/etc/hostapd.conf"
+bashio::log.info "Configuring hostapd..."
+tempio \
+    -conf /data/options.json \
+    -template /usr/share/tempio/hostapd.conf \
+    -out "${HOSTAPD_CONFIG}"

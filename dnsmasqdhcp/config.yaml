@@ -67,4 +67,9 @@ schema:
   dhcp_ntp: str
   dhcp_domain: str
   cache_size: int
+  hostapd_interface: str
+  hostapd_ssid: str
+  hostapd_passphrase: str
+  hostapd_channel: int
+  hostapd_hw_mode: str
 startup: system
