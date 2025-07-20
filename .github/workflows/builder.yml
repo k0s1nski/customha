@@ -121,7 +121,7 @@ jobs:
         run: |
           echo "Running validation for image ghcr.io/${{ github.repository_owner }}/${{ steps.check.outputs.image }}:latest"
 
-          docker run --rm ghcr.io/${{ github.repository_owner }}/${{ steps.check.outputs.image }}:latest \
+          docker run --rm ghcr.io/${{ github.repository_owner }}/${{ matrix.arch }}-addon-dnsmasqdhcp:latest \
             sh -c '\
               for dir in /usr/share/tempio; do \
                 if [ ! -d "$dir" ]; then echo "❌ Missing directory: $dir"; exit 1; fi; \
