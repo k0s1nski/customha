@@ -14,5 +14,5 @@ HOSTAPD_CONFIG="/etc/hostapd.conf"
 bashio::log.info "Configuring hostapd..."
 tempio \
     -conf /data/options.json \
-    -template /usr/share/tempio/hostapd.conf \
+    -template /usr/share/tempio/hostapd.config \
     -out "${HOSTAPD_CONFIG}"
