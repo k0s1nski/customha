@@ -26,7 +26,7 @@ jobs:
 
       - name: Get changed files
         id: changed_files
-        uses: jitterbit/get-changed-files@v1
+        uses: jitterbit/get-changed-files@v1.3.0
 
       - name: Find add-on directories
         id: addons
@@ -105,7 +105,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build ${{ matrix.addon }} add-on
+      - name: Build ${{ matrix.addon }} add-on. ${{ steps.check.outputs.image }}
         if: steps.check.outputs.build_arch == 'true'
         uses: home-assistant/builder@2025.03.0
         with:
@@ -116,7 +116,7 @@ jobs:
             --image "${{ steps.check.outputs.image }}" \
             --docker-hub "ghcr.io/${{ github.repository_owner }}" \
             --addon
-      - name: Validate image contents
+      - name: Validate image contents ${{ steps.check.outputs.image }}
         if: steps.check.outputs.build_arch == 'true'
         run: |
           echo "Running validation for image ghcr.io/${{ github.repository_owner }}/${{ steps.check.outputs.image }}:${{ matrix.arch }}"
