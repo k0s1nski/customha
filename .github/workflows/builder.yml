@@ -119,9 +119,9 @@ jobs:
       - name: Validate image contents ${{ steps.check.outputs.image }}
         if: steps.check.outputs.build_arch == 'true'
         run: |
-          echo "Running validation for image ghcr.io/${{ github.repository_owner }}/${{ steps.check.outputs.image }}:${{ matrix.arch }}"
+          echo "Running validation for image ghcr.io/${{ github.repository_owner }}/${{ steps.check.outputs.image }}:latest"
 
-          docker run --rm ghcr.io/${{ github.repository_owner }}/${{ steps.check.outputs.image }}:${{ matrix.arch }} \
+          docker run --rm ghcr.io/${{ github.repository_owner }}/${{ steps.check.outputs.image }}:latest \
             sh -c '\
               for dir in /usr/share/tempio; do \
                 if [ ! -d "$dir" ]; then echo "❌ Missing directory: $dir"; exit 1; fi; \
