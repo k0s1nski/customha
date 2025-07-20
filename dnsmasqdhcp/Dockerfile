@@ -1,4 +1,5 @@
-FROM home-assistant/builder:2025.03.0
+ARG BUILD_FROM=home-assistant/builder@2025.03.0
+FROM $BUILD_FROM
 
 # Add env
 ENV LANG C.UTF-8
