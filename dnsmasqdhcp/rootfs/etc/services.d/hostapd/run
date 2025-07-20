@@ -7,5 +7,5 @@ bashio::log.info "Starting hostapd..."
 # Set max open file limit to speed up startup
 ulimit -n 1024
 
-exec hostapd -C "${CONFIG}" -z < /dev/null
+exec hostapd "${CONFIG}" -z < /dev/null
 
