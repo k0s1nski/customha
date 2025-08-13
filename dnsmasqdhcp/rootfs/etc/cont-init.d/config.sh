@@ -11,13 +11,9 @@ tempio \
     -template /usr/share/tempio/dnsmasq.config \
     -out "${DNS_CONFIG}"
 
-HOSTAPD_CONFIG="/etc/hostapd.conf"
+HOSTAPD_CONFIG="/etc/hostapd/hostapd.conf"
 bashio::log.info "Configuring hostapd..."
 tempio \
     -conf /data/options.json \
     -template /usr/share/tempio/hostapd.config \
     -out "${HOSTAPD_CONFIG}"
-
-cat /data/options.json
-cat /etc/hostapd.conf
-which hostapd

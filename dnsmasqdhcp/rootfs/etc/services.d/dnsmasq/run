@@ -1,9 +1,10 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
+# vim: ft=bash
+# shellcheck shell=bash
 CONFIG="/etc/dnsmasq.conf"
-source /usr/lib/bashio/bashio.sh
 
 # Run dnsmasq
-bashio::log.info "Starting hostapd..."
+bashio::log.info "Starting dnsmasq..."
 
 # Set max open file limit to speed up startup
 ulimit -n 1024
