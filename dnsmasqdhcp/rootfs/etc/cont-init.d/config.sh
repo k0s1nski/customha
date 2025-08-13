@@ -17,3 +17,7 @@ tempio \
     -conf /data/options.json \
     -template /usr/share/tempio/hostapd.config \
     -out "${HOSTAPD_CONFIG}"
+
+cat /data/options.json
+cat /etc/hostapd.conf
+which hostapd
