@@ -1,5 +1,5 @@
 ---
-version: 1.1.19
+version: 1.1.20
 slug: dnsmasq
 name: Dnsmasq
 description: A simple DNS and DHCP server
@@ -38,7 +38,7 @@ options:
   cache_size: 150
   hostapd: false
   hostapd_interface: wlan0
-  hostapd_ssid: theoneyoulike
+  hostapd_ssid: ha-wlan
   hostapd_wpa_passphrase: ThisIsMyP@ssphrase
   hostapd_channel: 6
   hostapd_hw_mode: g  

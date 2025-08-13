@@ -3,7 +3,7 @@ CONFIG="/etc/dnsmasq.conf"
 source /usr/lib/bashio/bashio.sh
 
 # Run dnsmasq
-bashio::log.info "Starting dnsmasq..."
+bashio::log.info "Starting hostapd..."
 
 # Set max open file limit to speed up startup
 ulimit -n 1024

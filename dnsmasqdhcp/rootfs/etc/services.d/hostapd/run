@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+source /usr/lib/bashio/bashio.sh
+CONFIG="/etc/hostapd.conf"
+
+# Run dnsmasq
+bashio::log.info "Starting hostapd..."
+
+# Set max open file limit to speed up startup
+ulimit -n 1024
+
+exec hostapd "${CONFIG}"
