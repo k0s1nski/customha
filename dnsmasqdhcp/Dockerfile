@@ -1,6 +1,5 @@
-# ARG BUILD_FROM=home-assistant/builder@2025.03.0
-# FROM $BUILD_FROM
-FROM ghcr.io/home-assistant/amd64-base:3.22
+ARG BUILD_FROM=home-assistant/builder@2025.03.0
+FROM $BUILD_FROM
 
 # Add env
 ENV LANG C.UTF-8
