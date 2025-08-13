@@ -1,4 +1,5 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv bashio
+# shellcheck shell=bash
 # ==============================================================================
 # DNSMASQ and HOSTAPD config
 # ==============================================================================
