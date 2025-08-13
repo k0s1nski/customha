@@ -3,7 +3,6 @@
 # ==============================================================================
 # DNSMASQ and HOSTAPD config
 # ==============================================================================
-source /usr/lib/bashio/bashio.sh
 
 DNS_CONFIG="/etc/dnsmasq.conf"
 bashio::log.info "Configuring dnsmasq..."
